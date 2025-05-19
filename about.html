@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Bimal Pokhrel</title>
+
+  <!-- Google Fonts: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease-out forwards;
+    }
+    .back-btn {
+      display: inline-block;
+      margin: 30px auto 0;
+      background: white;
+      color: #001f3f;
+      font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      box-shadow: 0 0 10px white;
+      text-align: center;
+    }
+
+    .back-btn:hover {
+      background: #ffccff;
+      color: black;
+    }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body class="bg-[#0A192F] text-white">
+
+  <!-- About Section -->
+  <section class="px-6 py-16 md:px-24 lg:px-36 fade-in">
+    <h2 class="text-4xl md:text-5xl font-bold mb-10 border-b-4 border-[#64FFDA] inline-block">
+      About Me
+    </h2>
+
+    <p class="text-lg md:text-xl mb-6 leading-relaxed text-justify">
+      Hello, I’m <span class="font-semibold text-[#64FFDA]">Er. Bimal Pokhrel</span> — a dedicated Geomatics Engineer from Nepal with a strong passion for remote sensing, geospatial analytics, and environmental sustainability.
+    </p>
+
+    <p class="text-lg md:text-xl mb-6 leading-relaxed text-justify">
+      I completed my Bachelor's in Geomatics Engineering at Tribhuvan University (2018–2023) and hold a Category ‘A’ license from the Nepal Engineering Council. My work combines <span class="text-[#64FFDA] font-medium">GIS, Earth Observation, and machine learning</span> to support real-world problem solving in resource management, land cover change, and water quality.
+    </p>
+
+    <p class="text-lg md:text-xl mb-6 leading-relaxed text-justify">
+      I’ve published in peer-reviewed journals and was a finalist for the <span class="text-[#64FFDA] font-medium">Esri India Young Scholar Award 2024</span>. I also attended the <span class="text-[#64FFDA] font-medium">GNSS Summer School 2024</span>, expanding my skills in satellite navigation and positioning.
+    </p>
+
+    <p class="text-lg md:text-xl leading-relaxed text-justify">
+      Currently, I work as a <span class="text-[#64FFDA] font-semibold">GIS Analyst at Mappers Nepal</span> where I contribute to projects on urban planning, hazard mapping, and sustainable development. I also enjoy teaching surveying and geospatial methods to aspiring engineers.
+    </p>
+  </section>
+
+  <div style="text-align: center;">
+    <a class="back-btn" href="portall.html">← Back to Portfolio</a>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Achievements</title>
+  <style>
+    body {
+      background-color: #001f3f; /* Dark blue background */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 50px 20px;
+      color: #ffffff;
+    }
+
+    h1 {
+      text-align: center;
+      color: white;
+      text-shadow: 0 0 8px white;
+      margin-bottom: 40px;
+      font-size: 2.5em;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 25px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .achievement-box {
+      background-color: #ffb6c1; /* Light pink */
+      color: #000000; /* Black text */
+      border-radius: 20px;
+      box-shadow: 0 6px 15px rgba(255, 182, 193, 0.5);
+      padding: 20px 25px;
+      font-size: 16px;
+      line-height: 1.6;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .achievement-box:hover {
+      transform: scale(1.03);
+    }
+
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 10;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.85);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #fff;
+    }
+
+    .close {
+      position: absolute;
+      top: 30px;
+      right: 50px;
+      color: #fff;
+      font-size: 30px;
+      cursor: pointer;
+      z-index: 11;
+    }
+    .back-btn {
+      display: inline-block;
+      margin: 30px auto 0;
+      background: white;
+      color: #001f3f;
+      font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      box-shadow: 0 0 10px white;
+      text-align: center;
+    }
+
+    .back-btn:hover {
+      background: #ffccff;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Achievements & Awards</h1>
+
+  <div class="grid-container">
+    <div class="achievement-box" onclick="openModal('images_ii\\ICAS Appreciation.jpg')">
+      Certificate for Lead Trainer (Climate Change Adaptation Training) – 2024
+    </div>
+    <div class="achievement-box" onclick="openModal('images_ii\\gnss.png')">
+      Selected for GNSS Summer School – 2024
+    </div>
+    <div class="achievement-box" onclick="openModal('images_ii\\esri.jpg')">
+      Finalist – Esri India Young Scholar Program – 2024
+    </div>
+    <div class="achievement-box" onclick="openModal('images/hackathon_selection.jpg')">
+      Selected in Hackathon (Field Mapping Algorithm) – 2023
+    </div>
+    <div class="achievement-box" onclick="openModal('images/Trainer Certificate.jpg')">
+        Trainer Certificate – OSM & Field Data Collection – 2023
+    </div>
+    <div class="achievement-box" onclick="openModal('images/RTSTI.jpg')">
+        Participant – RTSTI National Conference – 2022
+    </div>
+        
+    <div class="achievement-box" onclick="openModal('images_ii\DGPS and Lidar Training.jpeg')">
+        Training: DGPS and Terrestrial Lidar (CSSGS) – 2022
+    </div>
+    <div class="achievement-box" onclick="openModal('images/Tikapur.jpg')">
+        Trainer – OSM at Tikapur AG Campus – 2022
+    </div>
+    <div class="achievement-box" onclick="openModal('images/YIL.jpg')">
+        Completed 14 Days OSM Monsoon Mapping Challenge – 2021
+    </div>
+    <div class="achievement-box" onclick="openModal('images/Runner-Up.jpg')">
+        First Runner-Up – GESAN Mapathon – 2019
+    </div>
+  
+   
+
+  <!-- Modal -->
+  <div class="modal" id="imageModal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+  </div>
+
+  <script>
+    function openModal(imageSrc) {
+      document.getElementById("imageModal").style.display = "flex";
+      document.getElementById("modalImage").src = imageSrc;
+    }
+
+    function closeModal() {
+      document.getElementById("imageModal").style.display = "none";
+    }
+
+    // Close modal when clicking outside the image
+    window.onclick = function(event) {
+      const modal = document.getElementById("imageModal");
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+   <div style="text-align: center;">
+    <a class="back-btn" href="portall.html">← Back to Portfolio</a>
+  </div>
+</body>
+</html>
